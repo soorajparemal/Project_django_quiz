@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% block main_content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+</head>
+<body style="background-image:url('http://wallpaperlayer.com/img/2015/8/colorful-minimal-wallpaper-4202-4430-hd-wallpapers.jpg');">
+<h1 align="center" style="font-size:80pt; color:lime    ;">Questions </h1><br><hr>
+<br>
+
+<form method="POST" action="result_page/">
+
+
+    {% for quizes in quiz %}
+    <h1 style="color:white;font-size:30pt;">Question : {{quizes.question}} ?</h1><br>
+       <div style="font-size:25pt; color:cyan;">
+        <input type="radio" value="{{quizes.one}}" name="{{quizes.id}}" style="width:20px;height:30px"> {{quizes.one}} <br>
+        <input type="radio" value="{{quizes.two}}" name="{{quizes.id}}" style="width:20px;height:30px">{{quizes.two}} <br>
+        <input type="radio" value="{{quizes.three}}" name="{{quizes.id}}" style="width:20px;height:30px">{{quizes.three}} <br>
+        <input type="radio" value="{{quizes.five}}" name="{{quizes.id}}" style="width:20px;height:30px">{{quizes.five}} <br>
+       </div>
+           <hr>
+    {% endfor %}
+    <br>
+    <input type="submit" id="submit" value="Submit"  style="height:50px;width:100px;color:cyan;background:black;"/>
+    {% csrf_token %}
+</form>
+</body>
+{% endblock %}
+</html>

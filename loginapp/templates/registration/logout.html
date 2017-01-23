@@ -1,0 +1,8 @@
+{% block main_content %}
+<body style="background-color:darkorange;color:black;font-size:20pt">
+{% block title %}Log Out Succesfull!{% endblock %}
+  <hr>
+  <p style="font-size:40pt"> User logged out.</p><hr>
+
+  <p><a href="{% url 'login' %}"> Click to Log in</a> </p>
+{% endblock %}

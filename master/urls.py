@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^userpage', views.user_page, name='user_page'),
     url(r'^certificate',views.certificate_page,name='certificate_page'),
     url(r'^teacher',views.teacher_page,name='teacher_page'),
+
 ]

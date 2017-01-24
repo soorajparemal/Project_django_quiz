@@ -1,0 +1,18 @@
+<html>
+<head>
+   <title>Login</title>
+</head>
+<h1 class='h1' style="font-size:50pt;color:grey"align="center">User Login Page<hr><hr></h1>
+<body class='body' style="background-color:darkorange" >
+
+
+{% block content %}
+<h2 style="color:white;font-size:30pt">Logged in as Teacher ! </h2>
+  <form method="post" class='teacher_page' action="teacher_page" style="background-color:orange; float:center;">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <br><button type="submit" style="color:black;height:100;width:300">Click To View Students Performance</button>
+  </form>
+{% endblock %}
+</body>
+</html>

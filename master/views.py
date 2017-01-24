@@ -10,6 +10,7 @@ def main_page(request):
     quiz=main.objects.all()
     context={'quiz':quiz}
     return render(request ,'master/mainpage.html',context)
+
 score=0
 def result_page(request):
     quiz=main.objects.all()
@@ -25,6 +26,9 @@ def result_page(request):
 
 def user_page(request):
     return render(request ,'master/userpage.html')
+
+def teacher_page(request):
+    return render(request ,'master/teacher.html')
 
 def certificate_page(request):
     return render(request,'master/certificate.html')

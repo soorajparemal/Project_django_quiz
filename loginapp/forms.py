@@ -11,3 +11,13 @@ class UserForm(forms.ModelForm):
         fields = ('username', 'email', 'password')
     school=forms.CharField(max_length=100)
     standard=forms.IntegerField()
+
+class TeacherForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput())
+
+    class Meta:
+        model = User
+        fields = ('username', 'email' ,'password')
+    school = forms.CharField(max_length=100)
+    standard = forms.IntegerField()
+

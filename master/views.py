@@ -28,7 +28,16 @@ def user_page(request):
     return render(request ,'master/userpage.html')
 
 def teacher_page(request):
-    return render(request, 'master/teacher.html')
+    quiz =main.objects.all()
+    global score
+
+    for quizes in quiz:
+        right=quizes.answer
+        entered=request.POST.get(str(quizes.id))
+        if(right==entered):
+            score += 1
+    context={'score':score}
+    return render(request, 'master/teacher.html',context)
 
 
 def certificate_page(request):
@@ -43,6 +52,3 @@ def certificate_page(request):
     context = {'score': score}
     return render(request, 'master/certificate.html', context)
 
-def get_user_profile(request, username):
-    user = User.objects.get(username=username)
-    return render(request, 'master/teacher.html', {"user":user})

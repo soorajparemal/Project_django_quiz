@@ -6,23 +6,28 @@
   <title>{% block title %}Welcome{% endblock %}</title>
 </head>
 <body style="background-color:darkorange;color:black;">
-<h1 align="center" style="font-size:50pt;font-family:arial;color:grey;"> Teacher Page </h1>
+<h1 align="center" style="font-size:50pt;font-family:comic;color:brown;"> Logged in Student Status </h1><hr style="height:10pt;background-color:blue;">
   <header>
     <h1></h1>
 	<div>
 </div>
     {% if user.is_authenticated %}
-     <div align="center" style="font-size:50pt;font-family:arial"> Welcome {{ user.username }} !!</div><br>
+     <div style="color:indigo;font-size:30pt;font-family:arial;"> The student currently logged in : {{ user.username }} <br>
+
+        <hr style="height:10pt;background-color:blue;"><br>Student Email ID : {{user.email}}<br>
+      <hr style="height:10pt;background-color:blue;">
+        <br>Student score  : {{score}}
+         <br><hr style="height:10pt;background-color:blue;">
+
       <pre class="tab">
 
 
 
       </pre>
-
+     </div>
 
     {% endif %}
   </header>
-
   <main>
     {% block content %}
     {% endblock %}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SignUp as Teacher</title>
+    </head>
+
+    <body style="background-color:darkorange; ">
+        <h1 style="font-family:arial; font-size:40pt; color:grey;"> Sign Up as Teacher</h1>
+
+        {% if registered %}
+         <strong style="color:black;font-size:20pt">Registered successfully !</strong>
+        <a style="font-size:30pt" href="/login">Login</a><br />
+        {% else %}
+
+        <form id="user_form" method="post" action="teacher_register"
+                enctype="multipart/form-data">
+
+            {% csrf_token %}
+            {{ user_form.as_p }}
+
+
+            <input type="submit" name="submit" value="Register" />
+
+
+        </form>
+        {% endif %}
+    </body>
+</html>

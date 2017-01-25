@@ -26,7 +26,7 @@ def register(request):
 
     return render(request, 'register.html', {'user_form': user_form,  'registered': registered})
 
-def teacher_login(request):
+def teacher_register(request):
     context = RequestContext(request)
 
     registered = False
@@ -47,7 +47,7 @@ def teacher_login(request):
     else:
         user_form = TeacherForm()
 
-    return render(request, 'teacher_login.html', {'user_form': user_form, 'registered': registered})
+    return render(request, 'teacher_register.html', {'user_form': user_form, 'registered': registered})
 
 def teacher_page(request):
     return render(request ,'master/teacher.html')

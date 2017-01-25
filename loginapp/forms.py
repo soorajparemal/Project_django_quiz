@@ -18,6 +18,6 @@ class TeacherForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ('username', 'email' ,'password')
-    school = forms.CharField(max_length=100)
-    standard = forms.IntegerField()
+    Working_at  = forms.CharField(max_length=100)
+    Teaching_standard = forms.IntegerField()
 

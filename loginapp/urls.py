@@ -24,7 +24,9 @@ urlpatterns = [
     url(r'^$', auth_views.login,{'template_name': 'registration/login.html'}, name='login'),
     url(r'^login/$', auth_views.login,{'template_name': 'registration/login.html'}    , name='login'),
     url(r'^logout/$', auth_views.logout,{'template_name': 'registration/logout.html'}, name='logout'),
-    url(r'^teacher_login',views.teacher_login, name='teacher_login'),
-    url(r'^teacher_page',views.teacher_page,name='teacher_page'),
+    url(r'^teacher_login',auth_views.login,{'template_name': 'teacher_login.html'},name='teacher_login'),
+    url(r'^teacher_register',views.teacher_register,name='teacher_register'),
+    url(r'^teacher_page',views.teacher_page, name='teacher_page'),
     url(r'^master/', include('master.urls'),),
+
 ]

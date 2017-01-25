@@ -2,7 +2,7 @@
 <head>
    <title>Login</title>
 </head>
-<h1 class='h1' style="font-size:50pt;color:grey"align="center">User Login Page<hr><hr></h1>
+<h1 class='h1' style="font-size:50pt;color:black"align="center">User Login Page<hr><hr></h1>
 <body class='body' style="background-color:darkorange" >
 
 {% block content %}
@@ -18,9 +18,9 @@
 <hr>
 <hr>
 <div style="font-size:25pt;font-color:white";>
-    <a href="{%  url 'teacher_login' %}">Login as Teacher</a></div>
+    <a style="color:black; font-size:50;font-family:arial" href="{%  url 'teacher_login' %}">Login as Teacher</a></div><hr><hr>
 
 
- <div style="font-size:25pt"> <a href="{% url 'register' %}"> New SignUp </a></div>
+ <br><div style="font-size:25pt"> <a style="color:black; font-size:50;font-family:arial" href="{% url 'register' %}"> SignUp as Student </a></div>
 </body>
 </html>

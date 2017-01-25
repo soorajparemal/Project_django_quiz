@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import main
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.models import User
 from django.contrib.auth.signals import user_logged_in
 # Create your views here
 
@@ -52,3 +53,8 @@ def certificate_page(request):
     context = {'score': score}
     return render(request, 'master/certificate.html', context)
 
+def user(request):
+    det=main.objects.all()
+    users=User.objects.all()
+    context = {'users':users,'det':det}
+    return render(request,'master/user.html',context)

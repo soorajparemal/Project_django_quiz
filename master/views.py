@@ -58,3 +58,8 @@ def user(request):
     users=User.objects.all()
     context = {'users':users,'det':det}
     return render(request,'master/user.html',context)
+
+def answerpage(request):
+    quiz=main.objects.all()
+    context={'quiz':quiz}
+    return render(request,'master/answer_page.html',context)

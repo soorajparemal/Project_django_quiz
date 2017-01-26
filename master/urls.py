@@ -9,5 +9,6 @@ urlpatterns = [
     url(r'^certificate',views.certificate_page,name='certificate_page'),
     url(r'^teacher_page',views.teacher_page,name='teacher_page'),
     url(r'^users', views.user,name='users'),
+    url(r'^answerpage', views.answerpage,name='answerpage'),
 
 ]

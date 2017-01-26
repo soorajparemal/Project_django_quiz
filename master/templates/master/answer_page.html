@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <title>Answers</title>
+</head>
+<body style="font-size:30pt;font-family:arial;background-color:darkorange;color:indigo ">
+<h1 align="center" style="color:black;font-family:comic">Answers Page</h1><hr><hr>
+{% for quizes in quiz %}
+    Question {{quizes.id}} :Right answer : {{quizes.answer}}<br><hr>
+{% endfor %}
+
+
+</body>
+</html>

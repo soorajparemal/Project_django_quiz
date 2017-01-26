@@ -9,12 +9,12 @@
 <div style="background-color;font-size:20pt;color:indigo"><h1 style="font-size:40pt;color:black" align="center">|| Answers List ||</h1><hr>
 
 {% for details in det %}
-    || {{details.question}}--  --  --{{details.answer}}<br>
+    || {{details.id}}: {{details.question}}---{{details.answer}}<br>
 {% endfor %}
 <br>
 </div ><br>
 <div style="background-color:orange;font-size:20pt;font-family:arial;color:indigo">
-<br><h1 style="font-size:30pt;color:black;font-family:arial;" align="center">:: USERS SIGNED IN ::</h1><br><hr><br>
+<br><h1 style="font-size:30pt;color:black;font-family:arial;" align="center">:: USERS ACTIVE ::</h1><br><hr><br>
 
 {% for userss in users %}
     User Name : {{userss.username}} <br>

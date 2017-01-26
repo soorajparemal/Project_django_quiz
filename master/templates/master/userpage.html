@@ -7,7 +7,7 @@
 </head>
 <body style="background-color:darkorange;color:black;">
 <script>
-    var seconds_left = 30;
+    var seconds_left = 12;
     var interval = setInterval(function() {
         document.getElementById('main_page').innerHTML = --seconds_left+' Seconds left to start your session !';
 
@@ -33,7 +33,7 @@
 
 
      <hr><div style="font-size:25pt;float:left;"> <a href="{% url 'logout' %}">Click to Logout</a></div>
-      <br><div style="font-size:25pt;float:right;"> <a href="{% url 'main_page' %}" id="main_page" class="button"> Click to start your Quiz Session </a></div>
+      <br><div style="font-size:25pt;float:right;"> <a  href="{% url 'main_page' %}" id="main_page" class="button"> Click to start your Quiz Session </a></div>
     {% endif %}
   </header>
 

@@ -31,25 +31,12 @@ def user_page(request):
 def teacher_page(request):
     quiz =main.objects.all()
     global score
-
-    for quizes in quiz:
-        right=quizes.answer
-        entered=request.POST.get(str(quizes.id))
-        if(right==entered):
-            score += 1
     context={'score':score}
     return render(request, 'master/teacher.html',context)
 
 
 def certificate_page(request):
     quiz = main.objects.all()
-    global score
-
-    for quizes in quiz:
-        right = quizes.answer
-        entered = request.POST.get(str(quizes.id))
-        if (right == entered):
-            score += 1
     context = {'score': score}
     return render(request, 'master/certificate.html', context)
 
